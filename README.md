@@ -23,7 +23,7 @@ A requirements.txt is added to the repository which can be used to install the d
 $ conda create --name <env> --file <this file>
 ```
 
-Example:
+Example
 
 ```
 $ conda create --name Dota2WR --file requirements.txt
@@ -37,7 +37,7 @@ The repository also contains a hero lookup table to decode Hero ID for practical
 Description and purpose for each file is given below.
 All the files required for testing the model is in Testing Folder.
   
-### Files:
+### Files
 
 - Data Preparation Dota 2 Neural Network.ipynb : Used for structuring data as per Machine Learning Model requirement. 
 - Data Preparation Dota 2.ipynb : Used for structuring data obtained from Dota_2.vp pickle file.
@@ -57,7 +57,7 @@ All the files required for testing the model is in Testing Folder.
 - Training & Testing Model.ipynb : A Jupyter Notebook for training and testing the model. Make sure all the files are in the same directory before running this notebook.
 - Image Folder : Contains .png file for results of different models.
 
-## Training the Model:
+## Training the Model
 
 I have already trained all the models and stored the weights for different model in the repository in Testing Folder.
 But you can call the function and train the models if you like using the following code.
@@ -83,7 +83,7 @@ You can call the function using following lines of code.
 testing_model('FFNN', 'Hero', [8, 36, 119, 27, 75], [17, 20, 71, 47, 109])
 ```
 
-### Additional Notes:
+### Additional Notes
 
 This project was an inspiration from the AlphaMao project at VPGame, Inc.
 If you are interested you can check their code at https://github.com/vpus/dota2-win-rate-prediction-v1.
