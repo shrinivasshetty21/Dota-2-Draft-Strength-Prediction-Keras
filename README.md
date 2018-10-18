@@ -11,17 +11,9 @@ Use the following instructions to make your system ready to run the code.
 
 Project is run using:
 - Windows 10
-- Python 3.5/3.6
-- scipy=1.1.0
-- scikit-learn=0.19.1
-- pandas=0.23.0
-- numpy=1.14.3
-- anaconda
-- tensorflow
-- keras
-- cycler
-- matplotlib
-- pickle
+- Python 3.5/Anaconda
+- TensorFlow 1.11.0
+- Keras 2.2.4
 
 ### Installing
 
@@ -43,6 +35,7 @@ The repository contains jupyter notebooks that are used to structure the data ob
 The .csv files contain the clean structured data that is used by Jupyter Notebook to train the model and perform predictions. 
 The repository also contains a hero lookup table to decode Hero ID for practical implementations if required.
 Description and purpose for each file is given below.
+All the files required for testing the model is in Testing Folder.
   
 ### Files:
 
@@ -59,24 +52,35 @@ Description and purpose for each file is given below.
 - lstm_ffnn_model.py : Hybrid Model function that returns the defined model.
 - Team Input Model.ipynb : A Jupyter Notebook for tweaking Team Model as per requirement without using any model functions like ffnn_model.py.
 - Hero Input Model.ipynb : A Jupyter Notebook for tweaking Hero Model as per requirement without using any model functions like ffnn_model.py.
-- Image files containing results of different models.
+- training_model.py : A python function to train the model.
+- testing_model.py : A python function to test the model.
+- Training & Testing Model.ipynb : A Jupyter Notebook for training and testing the model. Make sure all the files are in the same directory before running this notebook.
+- Image Folder : Contains .png file for results of different models.
 
-## Testing Code: 
+## Training the Model:
 
-After training the model you can use the following script to call the model you have trained to return draft strenght in percentage.
-Here the model name is Model_T as trained in the Jupyter Notebook.
-
-### Example:
+I have already trained all the models and stored the weights for different model in the repository in Testing Folder.
+But you can call the function and train the models if you like using the following code.
 
 ```
-# After training your model run the following code.
-# Replace with your squad hero id here.
-My_Team = np.asarray([[8, 36, 119, 27, 75]])
-# Replace with Enemy squad hero id here.
-Enemy_Team = np.asarray([[17, 20, 71, 47, 109]])
-Draft_Strength = Model_T.predict([My_Team, Enemy_Team], batch_size=None, verbose=0, steps=None)
-print('My Team Strength: '+ str(Draft_Strength[0][0]*100) + '%')
-print('Enemy Team Strength: '+ str(100 - Draft_Strength[0][0]*100) + '%')
+# First Input to the function = Model Name : 'FFNN', 'LSTM', 'LSTM_FFNN'
+# Second Input to the function = Model Type : 'Hero', 'Team'
+# Example:
+training_model('FFNN', 'Hero')
+```
+
+## Testing the Model
+
+The Testing Folder contains the testing_model along with the weights for each model.
+You can call the function using following lines of code.
+
+```
+# First Input to the function = Model Name : 'FFNN', 'LSTM', 'LSTM_FFNN'
+# Second Input to the function = Model Type : 'Hero', 'Team'
+# Third Input Your Team Hero ID's = List containing Hero ID's : [8, 36, 119, 27, 75]
+# Fourth Input Enemy Team Hero ID's = List containing Hero ID's : [17, 20, 71, 47, 109]
+# Example:
+testing_model('FFNN', 'Hero', [8, 36, 119, 27, 75], [17, 20, 71, 47, 109])
 ```
 
 ### Additional Notes:
