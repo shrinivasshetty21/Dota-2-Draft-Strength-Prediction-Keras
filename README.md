@@ -1,7 +1,7 @@
 # Dota 2 Draft Strength Prediction With Keras
 
 The goal of this project is to decide which draft is better in a Dota 2 match based on the heroes picked in the draft. The repository contains datasets that are cleaned and stored as .csv files, it has a pickle file with unstructured data obtained from VPGame Inc., jupyter notebook contains detailed information for loading the data and running the model.
-For more information on the purpose and incentive of this project please check this blog - https://medium.com/@shrinivasshetty21/deep-learning-with-keras-on-dota-2-statistics-part-1-9e889ab25e47.
+For more information on the purpose and incentive of this project please check this blog - https://medium.com/@shrinivasshetty21/deep-learning-with-keras-on-dota-2-statistics-9a937434f9e0.
 
 ## Getting Started
 
