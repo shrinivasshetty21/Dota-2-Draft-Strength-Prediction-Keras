@@ -11,7 +11,7 @@ Use the following instructions to make your system ready to run the code.
 
 Project is run using:
 - Windows 10
-- Python 3.5/Anaconda
+- Python 3.5
 - TensorFlow 1.11.0
 - Keras 2.2.4
 
