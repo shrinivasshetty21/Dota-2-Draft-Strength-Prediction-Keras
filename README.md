@@ -38,24 +38,34 @@ Description and purpose for each file is given below.
 All the files required for testing the model is in Testing Folder.
   
 ### Files
+- Hero Lookup Table : Contains information of Hero Name analogous to Hero ID.
 
+### Folders
+##### Data Processing Notebooks
 - Data Preparation Dota 2 Neural Network.ipynb : Used for structuring data as per Machine Learning Model requirement. 
 - Data Preparation Dota 2.ipynb : Used for structuring data obtained from Dota_2.vp pickle file.
 - Dota_2.vp : Data provided by VPGame, Inc. for pursuing similar project, now made available to public.
-- LICENSE : License for using the data used in this project.
 - Dota_2_Cleaned_Data.csv : Contains a structured form of data obtained from pickle file.
 - Dota_2_Model_Data.csv : Contains a structured form of data useful for the model.
-- Hero Lookup Table : Contains information of Hero Name analogous to Hero ID.
+
+##### Deep Learning Model Notebooks
 - Predicting Dota 2 Draft Strength Using Keras.ipynb : Jupyter Notebook implementing the project.
+- Team Input Model.ipynb : A Jupyter Notebook for tweaking Team Model as per requirement without using any model functions like ffnn_model.py.
+- Training & Testing Model.ipynb : A Jupyter Notebook for training and testing the model. Make sure all the files are in the same directory before running this notebook.
+- Hero Input Model.ipynb : A Jupyter Notebook for tweaking Hero Model as per requirement without using any model functions like ffnn_model.py.
+
+##### Training Scripts
 - ffnn_model.py : Feed Forward Neural Network Model function that returns the defined model.
 - lstm_model.py : LSTM Model function that returns the defined model.
 - lstm_ffnn_model.py : Hybrid Model function that returns the defined model.
-- Team Input Model.ipynb : A Jupyter Notebook for tweaking Team Model as per requirement without using any model functions like ffnn_model.py.
-- Hero Input Model.ipynb : A Jupyter Notebook for tweaking Hero Model as per requirement without using any model functions like ffnn_model.py.
 - training_model.py : A python function to train the model.
+
+##### Image
+- Contains .png files for results of different models.
+
+##### Testing Script
+- Contains .h5 files for training the model.
 - testing_model.py : A python function to test the model.
-- Training & Testing Model.ipynb : A Jupyter Notebook for training and testing the model. Make sure all the files are in the same directory before running this notebook.
-- Image Folder : Contains .png file for results of different models.
 
 ## Training the Model
 
@@ -82,7 +92,11 @@ You can call the function using following lines of code.
 # Example:
 testing_model('FFNN', 'Hero', [8, 36, 119, 27, 75], [17, 20, 71, 47, 109])
 ```
-
+Output:
+```
+My Team Strength: 67%
+Enemy Team Strength: 33%
+```
 ### Additional Notes
 
 This project was an inspiration from the AlphaMao project at VPGame, Inc.
